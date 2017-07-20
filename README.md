@@ -1,2 +1,2 @@
 # MLM
-MLM web-based project
+Multi Level Marketing software
