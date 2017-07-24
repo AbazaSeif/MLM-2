@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    Options -Indexes
+    
+
+    # ignore files/directories from further rules
+	RewriteCond %{REQUEST_FILENAME} -d [OR]
+	RewriteCond %{REQUEST_FILENAME} -f
+	RewriteRule ^ - [L]
+
+	RewriteRule ^site/([^/]+)/?$ main-clone.php?name=$1 [L,QSA,NC]
+
+</IfModule>
